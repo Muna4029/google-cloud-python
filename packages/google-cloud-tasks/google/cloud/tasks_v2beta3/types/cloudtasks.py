@@ -15,7 +15,7 @@
 #
 from __future__ import annotations
 
-from typing import MutableMapping, MutableSequence
+from typing import MutableSequence
 
 from google.protobuf import field_mask_pb2  # type: ignore
 import proto  # type: ignore
@@ -563,9 +563,8 @@ class RunTaskRequest(proto.Message):
 
             Authorization for
             [FULL][google.cloud.tasks.v2beta3.Task.View.FULL] requires
-            ``cloudtasks.tasks.fullView`` `Google
-            IAM <https://cloud.google.com/iam/>`__ permission on the
-            [Task][google.cloud.tasks.v2beta3.Task] resource.
+            ``cloudtasks.tasks.fullView`` `Google IAM <https://cloud.google.com/iam/>`__
+            permission on the [Task][google.cloud.tasks.v2beta3.Task] resource.
     """
 
     name: str = proto.Field(

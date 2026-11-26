@@ -15,7 +15,7 @@
 #
 from __future__ import annotations
 
-from typing import MutableMapping, MutableSequence
+from typing import MutableSequence
 
 from google.protobuf import timestamp_pb2  # type: ignore
 import proto  # type: ignore
@@ -82,8 +82,8 @@ class Corpus(proto.Message):
 
 
 class Document(proto.Message):
-    r"""A ``Document`` is a collection of ``Chunk``\ s. A ``Corpus`` can
-    have a maximum of 10,000 ``Document``\ s.
+    r"""A ``Document`` is a collection of ``Chunk``s. A ``Corpus`` can
+    have a maximum of 10,000 ``Document``s.
 
     Attributes:
         name (str):
@@ -280,6 +280,7 @@ class Condition(proto.Message):
                 Supported by string only when ``CustomMetadata`` value type
                 for the given key has a ``string_list_value``.
         """
+
         OPERATOR_UNSPECIFIED = 0
         LESS = 1
         LESS_EQUAL = 2
@@ -352,6 +353,7 @@ class Chunk(proto.Message):
             STATE_FAILED (10):
                 ``Chunk`` failed processing.
         """
+
         STATE_UNSPECIFIED = 0
         STATE_PENDING_PROCESSING = 1
         STATE_ACTIVE = 2
